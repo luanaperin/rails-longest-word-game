@@ -1,0 +1,14 @@
+<h1>P-A-L-P-I-T-E</h1>
+<p>Qual a palavra?!</p>
+
+
+  <%= @grid.join(' ') %>
+
+  <center>
+    <form action="/score" method="get">
+      <input type="text" name="query" placeholder="Qual seu palpite?">
+      <input type="hidden" name="grid" value="<%= @grid %>" >
+      <input type="hidden" name="start_time" value="<%= @start_time %>" >
+      <input type="submit">
+    </form>
+  </center>
